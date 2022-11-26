@@ -5,7 +5,7 @@ import org.hibernate.Transaction;
 
 import java.time.LocalDate;
 
-    public class MainInsert {
+    public class MainCreate_Insert {
         public static void main(String[] args) {
 
             try {
