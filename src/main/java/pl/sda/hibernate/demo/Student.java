@@ -7,13 +7,13 @@ package pl.sda.hibernate.demo;
 //- pusty konstruktor
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 @Data
 @Entity
+@AllArgsConstructor
+@Builder
 @NoArgsConstructor
 public class Student {
     @Id // PRIMARY KEY

@@ -11,12 +11,19 @@ public class Main {
 
         try {Session session = HibernateUtil.INSTANCE.getSessionFactory().openSession();
            Transaction transaction =  session.beginTransaction();
-            //tworzymy studenta
-           Student student = new Student();
-           student.setImie("Roman");
-           student.setDataUrodzenia(LocalDate.of(1995,12,12));
-           student.setKierunekNauczania("Informatyka");
-           student.setIndeks("928372");
+//            //tworzymy studenta
+//           Student student = new Student();
+//           student.setImie("Roman");
+//           student.setDataUrodzenia(LocalDate.of(1995,12,12));
+//           student.setKierunekNauczania("Informatyka");
+//           student.setIndeks("928372");
+
+            Student student = Student.builder()
+                    .imie("Roman")
+                    .dataUrodzenia(LocalDate.of(1995,12,12))
+                    .indeks("123123")
+                    .kierunekNauczania("Programistyka Kryminalna")
+                            .build();
 
            // zapisujemy studenta
            session.persist(student);
